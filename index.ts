@@ -8,7 +8,7 @@ export class Crawler {
     client!: Got
     cookieJar!: CookieJar
     html = ``
-    document = parseHTML(``).document
+    document: Document = parseHTML(``).document
 
     static factory() {
         const instance = new Crawler()
@@ -27,9 +27,9 @@ export class Crawler {
                         return res
                     }
                 ]
-            }
-            // followRedirect:false,
-            // cookieJar: instance.cookieJar,
+            },
+            followRedirect:false,
+            cookieJar: instance.cookieJar,
             
         })
 

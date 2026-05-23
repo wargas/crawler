@@ -1,18 +1,20 @@
 {
   "name": "@wargas/crawler",
-  "version": "0.0.2",
+  "version": "0.0.4",
   "module": "index.ts",
   "main": "dist/index.js",
   "type": "module",
   "private": false,
   "scripts": {
-    "build": "bun build index.ts --target node --outdir dist"
+    "build": "bun build index.ts --target node --outdir dist",
+    "publish": "npm publish --tag latest --access public"
   },
   "devDependencies": {
-    "@types/bun": "latest"
+    "@types/bun": "latest",
+    "tsc": "^2.0.4"
   },
   "peerDependencies": {
-    "typescript": "^5"
+    "typescript": "^6.0.3"
   },
   "dependencies": {
     "got": "^15.0.5",

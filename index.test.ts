@@ -1,5 +1,5 @@
 import { expect, test } from 'bun:test'
-import { Crawler } from "./index";
+import { Crawler } from "./";
 
 test(`get page title`, async function() {
         
