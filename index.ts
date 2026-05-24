@@ -1,4 +1,4 @@
-import type { Got } from "got";
+import type { Got, OptionsOfTextResponseBody } from "got";
 import got from "got";
 import { CookieJar } from "tough-cookie";
 import FileCookieStore from "tough-cookie-file-store";
@@ -39,4 +39,25 @@ export class Crawler {
     async removeAllCookies(){
         await this.cookieJar.removeAllCookies()
     }
+
+    async get(url:string, options?:OptionsOfTextResponseBody){
+        return this.client.get(url, options)
+    }
+
+    async post(url:string, options?:OptionsOfTextResponseBody){
+        return this.client.post(url, options)
+    }
+
+    async put(url:string, options?:OptionsOfTextResponseBody){
+        return this.client.put(url, options)
+    }
+
+    async patch(url:string, options?:OptionsOfTextResponseBody){
+        return this.client.patch(url, options)
+    }
+
+    async delete(url:string, options?:OptionsOfTextResponseBody){
+        return this.client.delete(url, options)
+    }
+
 }
