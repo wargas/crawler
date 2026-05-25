@@ -12,4 +12,14 @@ export declare class Crawler {
     static factory(): Crawler;
 
     removeAllCookies(): Promise<void>;
+
+    get:Got["get"];
+
+    post:Got["post"];
+
+    put:Got["post"];
+
+    patch:Got["patch"];
+
+    delete:Got["delete"]
 }
